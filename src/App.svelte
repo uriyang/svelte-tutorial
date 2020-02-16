@@ -6,6 +6,7 @@
 <main>
 	<h1>Hello {name}</h1>
 	<img src={src} alt="dance" />
+	<p>This is a paragraph.<p>
 </main>
 
 <style>
@@ -27,5 +28,11 @@
 		main {
 			max-width: none;
 		}
+	}
+
+	p {
+		color: purple;
+		font-family: 'Comic Sans Ms', cursive;
+		font-size: 2em;
 	}
 </style>
