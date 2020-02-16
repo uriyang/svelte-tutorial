@@ -4,6 +4,7 @@
 
 <main>
 	<Nested answer={42} />
+	<Nested />
 </main>
 
 <style>
