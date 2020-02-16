@@ -1,25 +1,26 @@
 <script>
-	let count = 0;
+	let numbers = [1, 2, 3, 4];
 
-	function handleClick() {
-		count += 1;
-	}
-	$: {
-		console.log(`ths count is ${count}`);
-		alert(`I SAID THE COUNT IS ${count}`);
+	function addNumber() {
+		// # type 1
+		// numbers.push(numbers.length + 1);
+		// numbers = numbers;
+
+		// # type 2
+		// numbers = [...numbers, numbers.length + 1]
+
+		// # type 3
+		numbers[numbers.length] = numbers.length + 1
+
 	}
 
-	$: {
-		if (count >= 10) {
-			alert(`count is dangerously high!`);
-			count = 9;
-		}
-	}
+	$: sum = numbers.reduce((t, n) => t + n, 0)
 </script>
 
 <main>
-	<button on:click={handleClick}>
-		Clicked {count} {count === 1 ? 'time' : 'times' }
+	<p>{numbers.join(' + ')} = {sum}</p>
+	<button on:click={addNumber}>
+		Add a number
 	</button>
 </main>
 
