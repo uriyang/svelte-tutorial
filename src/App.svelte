@@ -1,9 +1,9 @@
 <script>
-	export let name;
+	let name = 'world';
 </script>
 
 <main>
-	<h1>Hello world</h1>
+	<h1>Hello {name}</h1>
 </main>
 
 <style>
