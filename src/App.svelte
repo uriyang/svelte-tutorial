@@ -1,15 +1,9 @@
 <script>
-	import Nested from './Nested.svelte';
-
-	let name = 'world'
-	let src = 'https://svelte.dev/tutorial/image.gif'
+	let string = `this string contains some <strong>HTML!!!</strong>`;
 </script>
 
 <main>
-	<h1>Hello {name}</h1>
-	<img src={src} alt="dance" />
-	<p>This is a paragraph.<p>
-	<Nested />
+	<h1>{@html string}</h1>
 </main>
 
 <style>
@@ -21,21 +15,12 @@
 	}
 
 	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
+		font-weight: normal;
 	}
 
 	@media (min-width: 640px) {
 		main {
 			max-width: none;
 		}
-	}
-
-	p {
-		color: purple;
-		font-family: 'Comic Sans Ms', cursive;
-		font-size: 2em;
 	}
 </style>
