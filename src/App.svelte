@@ -1,26 +1,20 @@
 <script>
-	let string = `this string contains some <strong>HTML!!!</strong>`;
+	let count = 0;
+
+	function handleClick() {
+		count += 1;
+	}
 </script>
 
 <main>
-	<h1>{@html string}</h1>
+	<button on:click={handleClick}>
+	Clicked {count} {count === 1 ? 'time' : 'times' }</button>
 </main>
 
 <style>
 	main {
 		text-align: center;
 		padding: 1em;
-		max-width: 240px;
 		margin: 0 auto;
-	}
-
-	h1 {
-		font-weight: normal;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
 	}
 </style>
