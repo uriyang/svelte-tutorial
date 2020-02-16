@@ -1,9 +1,11 @@
 <script>
-	let name = 'world';
+	let name = 'world'
+	let src = 'https://svelte.dev/tutorial/image.gif'
 </script>
 
 <main>
 	<h1>Hello {name}</h1>
+	<img src={src} alt="dance" />
 </main>
 
 <style>
